@@ -4,15 +4,13 @@ import s from './FriendList.module.css';
 
 const FriendList = ({ friends }) => {
     return (
-        <ul>
+        <ul className={s.friendList}>
             {friends.map(friend => (
-                <li key={friend.id}>
-                    <FriendListItem friend={friend} />
-                </li>
+                <FriendListItem key={friend.id} friend={friend} />
             ))}
         </ul>
     );
-}
+};
 
 
 
